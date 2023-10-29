@@ -12,6 +12,7 @@ public class EffectsCreater :MonoBehaviour
     //使用信息
     public GameObject effectUser;//表示谁使用这个效果，这个效果要给谁使用
     public string effectReciever;//如果对方的tag满足接收者需要传递效果。比如碰到了tag是enemy，那么就要给enemy接收器发subeffects
+    public int effectStartTimePoint;//效果开始作用的时间点，比如是1代表Slash前2代表Slash时3代表Slash完成落地
     public List<ScriptableObject> subEffects= new List<ScriptableObject>();//用于携带别的特效,例如该特效是生成collider,这个碰撞体还需要带一个伤害效果
 
 
