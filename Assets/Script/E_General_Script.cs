@@ -21,6 +21,7 @@ public class E_General_Script : MonoBehaviour
     public int E_HealthMaxNum = 3;
     private int E_HealthCurrentNum;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,7 @@ public class E_General_Script : MonoBehaviour
         enemy_Movement();
         enemy_Flip();
         enemy_Status();
+        enemyselfDie();
     }
 
     private void healthBarInstantiate()
@@ -109,4 +111,46 @@ public class E_General_Script : MonoBehaviour
             transform.localScale = new Vector3(-faceDir, 1, 1) * 3f;
         }
     }
+
+    public void enemyGofer()
+    {
+        if (EffectsPostOfficeScript.me.PO_DamageBox.Count>0)
+        {
+            for (int i = 0; i < EffectsPostOfficeScript.me.PO_DamageBox.Count; i++)
+            {
+                switch (EffectsPostOfficeScript.me.PO_DamageBox[i].EffectType)
+                {
+                    case "Damage":
+                        
+                        enemyDamage(EffectsPostOfficeScript.me.PO_DamageBox[i].Damage);
+                        break;
+                    case "Break":
+                        break;
+                    default:
+                        break;
+                }
+            }
+ 
+        }
+        
+    }
+    private void enemyDamage(int Dnum)
+    {
+        E_HealthMaxNum -= Dnum;
+    }
+    private void enemyselfDie()
+    {
+        if (E_HealthMaxNum<=0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Hero")
+        {
+            enemyGofer();
+        }
+    }
+
 }

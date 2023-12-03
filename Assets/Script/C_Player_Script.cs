@@ -35,6 +35,7 @@ public class C_Player_Script : MonoBehaviour
     void FixedUpdate()
     {
         Player_Move_controller();//用于触发移动
+
     }
 
     private void healthBarInstantiate()
@@ -101,19 +102,25 @@ public class C_Player_Script : MonoBehaviour
     }
     void Player_Flip()
     {
-        //根据输入方向判定翻转的方向和触发
-        float faceDir = Input.GetAxisRaw("Horizontal");
-        if (faceDir != 0)
+        float faceDir = MouseInteraction_Script.me.mouseDir.x;
+        if (faceDir<0)
         {
-            transform.localScale = new Vector3(-faceDir, 1, 1) * 3f;
+            transform.localScale = new Vector3(-1, 1, 1) * 3f;
         }
+        if (faceDir > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1) * 3f;
+        }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy"&& EffectsPostOfficeScript.me.PO_senderInfo.SenderHolderState!="Moving")
         {
+            //print("player"+EffectsPostOfficeScript.me.PO_senderInfo.SenderHolderState);
             SceneManager.LoadScene(2);
+            
         }
         
     }
