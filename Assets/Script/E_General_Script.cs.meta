@@ -3,9 +3,7 @@ guid: 6ea85d95a466a7e42b54e2ceebffd5a9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - SPUM_Ani: {instanceID: 0}
-  - E_HealthPoint: {fileID: 3753307522759246904, guid: c773fb32ef01d474ebcb87b4717b3183, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
