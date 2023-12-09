@@ -13,7 +13,7 @@ public class E_EnemySpawner_Script : MonoBehaviour
 
     void Start()
     {
-        Enemy_SpawnTimer = 100f;
+        Enemy_SpawnTimer = 0f;
     }
 
     // Update is called once per frame
