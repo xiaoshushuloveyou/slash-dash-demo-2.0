@@ -8,6 +8,9 @@ TagManager:
   - Hero
   - Bullet
   - SlashPath
+  - DamageBox
+  - BreakBox
+  - HookerBox
   layers:
   - Default
   - TransparentFX

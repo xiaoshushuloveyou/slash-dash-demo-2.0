@@ -9,14 +9,25 @@ public class EffectsPostOfficeScript : MonoBehaviour
     public senderState PO_senderInfo;
     public List<damageletters>  PO_DamageBox;
 
-    //private void Update()
-    //{
-    //    if (PO_senderInfo.SenderHolderState == "Moving")
-    //    {
-    //        print(PO_DamageBox[0].Damage);
-    //    }
+    private void Update()
+    {
+        //if (Input.GetMouseButtonUp(0))
+        //{
+        //    for (int i = 0; i < PO_DamageBox.Count; i++)
+        //    {
+        //        print(PO_DamageBox[i].EffectType);
+        //        print(PO_DamageBox[i].Damage);
+        //        print("________________________________");
+        //    }
+        //}
 
-    //}
+        if (PO_senderInfo.SenderCardState == "CardEndTiming")
+        {
+            PO_DamageBox = new List<damageletters>();
+        }
+
+
+    }
 
 
 
