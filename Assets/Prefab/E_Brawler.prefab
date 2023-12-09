@@ -2754,9 +2754,9 @@ GameObject:
   - component: {fileID: 602540103606392872}
   - component: {fileID: 1243222674275080381}
   - component: {fileID: 3939967322886305412}
+  - component: {fileID: 3939967322886305409}
   - component: {fileID: 3939967322886305408}
   - component: {fileID: 3939967322886305414}
-  - component: {fileID: 2946140140495741140}
   m_Layer: 5
   m_Name: E_Brawler
   m_TagString: Enemy
@@ -2820,6 +2820,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &3939967322886305409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5532444853236293646}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3090442, y: 0.49361166, z: 0.13347752}
+  m_Center: {x: -0.0043890676, y: 0.15337926, z: 0.018325841}
 --- !u!114 &3939967322886305408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2848,19 +2861,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f10acf30f322941a65a8b299807978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &2946140140495741140
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5532444853236293646}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.17
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5685078542538562491
 GameObject:
   m_ObjectHideFlags: 0

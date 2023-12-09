@@ -44,8 +44,8 @@ public class SPUM_Prefabs : MonoBehaviour
 
             case 4: //Attack Sword
             _anim.SetTrigger("Attack");
-            _anim.SetFloat("AttackState",0f);
-            _anim.SetFloat("NormalState",0f);
+            _anim.SetFloat("AttackState",0.0f);
+            _anim.SetFloat("NormalState",0.0f);
             break;
 
             case 5: //Attack Bow

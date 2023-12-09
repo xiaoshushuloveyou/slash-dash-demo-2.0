@@ -6,8 +6,6 @@ TagManager:
   tags:
   - Enemy
   - Hero
-  - Bullet
-  - SlashPath
   layers:
   - Default
   - TransparentFX
