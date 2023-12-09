@@ -86,9 +86,10 @@ public class Effect_CPU : MonoBehaviour
 
     public bool E_BasicBreakEffect()
     {
-        ifstopmove = true;
+        
         if (CPUifnowisbreak)
         {
+            ifstopmove = true;
             SPUM_Ani.PlayAnimation(0);
             breakTimeer += Time.deltaTime;
             if (breakTimeer > breakTimeLength)
@@ -96,10 +97,19 @@ public class Effect_CPU : MonoBehaviour
                 CPUifnowisbreak = false;
                 ifstopmove = false;
                 breakTimeer = 0f;
+
             }
         }
         
         return CPUifnowisbreak;
+    }
+    public void E_BasicBreakTimerReset()
+    {
+        CPUifnowisbreak = true;
+        breakTimeer = 0f;
+        ifstopmove = false;
+
+
     }
 
     public void E_hookerBoxEffectLogic(Vector3 moveTarget)

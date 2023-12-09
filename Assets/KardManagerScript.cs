@@ -35,7 +35,10 @@ public class KardManagerScript : MonoBehaviour
         }
         if (nextCard)
         {
+            //print(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState + "__________" + EffectsPostOfficeScript.me.PO_senderInfo.SenderHolderState);
+            EffectsPostOfficeScript.me.PO_senderInfo = new EffectsPostOfficeScript.senderState("StateIdle", "CardReleasedTiming");
             Instantiate(Kardlist[nowCardNum]);
+            //print(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState + "__________" + EffectsPostOfficeScript.me.PO_senderInfo.SenderHolderState);
             nextCard = false;
         }
 

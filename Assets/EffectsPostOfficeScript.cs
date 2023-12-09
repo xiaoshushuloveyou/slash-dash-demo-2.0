@@ -13,12 +13,13 @@ public class EffectsPostOfficeScript : MonoBehaviour
     {
         //if (Input.GetMouseButtonUp(0))
         //{
-        //    for (int i = 0; i < PO_DamageBox.Count; i++)
-        //    {
-        //        print(PO_DamageBox[i].EffectType);
-        //        print(PO_DamageBox[i].Damage);
-        //        print("________________________________");
-        //    }
+        //    //for (int i = 0; i < PO_DamageBox.Count; i++)
+        //    //{
+        //    //    print(PO_DamageBox[i].EffectType);
+        //    //    print(PO_DamageBox[i].Damage);
+        //    //    print("________________________________");
+        //    //}
+        //    print(PO_senderInfo.SenderCardState + "__________" + PO_senderInfo.SenderHolderState);
         //}
 
         if (PO_senderInfo.SenderCardState == "CardEndTiming")

@@ -55,7 +55,10 @@ public class V_BasicSlash_Damage : EffectsCreater
         {
             ifinsDmgBox = true;            
             effectHolder.transform.GetComponent<SphereCollider>().enabled = true;
-            BasicSlashCardState = CardState.CardEndTiming;
+            if (BasicSlashCardState != CardState.CardEndTiming)
+            {
+                BasicSlashCardState = CardState.CardEndTiming;
+            }
             PO_senderInfoSyn();
         }
     }

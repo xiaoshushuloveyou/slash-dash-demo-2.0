@@ -35,7 +35,11 @@ public class V_BreakSlash_Damage : EffectsCreater
         {
             ifinsBrkBox = true;
             effectHolder.transform.GetComponent<SphereCollider>().enabled = true;
-            BasicSlashCardState = CardState.CardEndTiming;
+            if (BasicSlashCardState != CardState.CardEndTiming)
+            {
+                BasicSlashCardState = CardState.CardEndTiming;
+            }
+            
             PO_senderInfoSyn();
         }
     }

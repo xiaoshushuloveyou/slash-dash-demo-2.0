@@ -31,6 +31,10 @@ public class E_General_Script : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (currentBreakNum<0)
+        {
+            currentBreakNum = 0;
+        }
         enemyselfDie();
         if (currentBreakNum <= 0)
         {
@@ -39,6 +43,7 @@ public class E_General_Script : MonoBehaviour
             {
                 currentBreakNum = maxBreakNum;
                 breakBar.SetBreakNum(currentBreakNum);
+                //EffectsPostOfficeScript.me.PO_senderInfo = new EffectsPostOfficeScript.senderState(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState,"CardEndTiming");
             }
             
         }
@@ -82,6 +87,7 @@ public class E_General_Script : MonoBehaviour
         }
         if (other.tag == "BreakBox")
         {
+            CPUscript.E_BasicBreakTimerReset();
             enemyBreakNum(CPUscript.E_BreakGoferLogic());
         }
         if (other.tag == "HookerBox")
