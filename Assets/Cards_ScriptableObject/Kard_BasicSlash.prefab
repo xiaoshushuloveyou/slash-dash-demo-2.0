@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271792968101868655}
   - component: {fileID: 271792968101868652}
-  - component: {fileID: -8300923478084594629}
-  - component: {fileID: 7513985081545090943}
+  - component: {fileID: 271792968101868649}
   - component: {fileID: 271792968101868654}
   m_Layer: 0
   m_Name: Kard_BasicSlash
@@ -47,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2344040fb373d4cbf0ab6bd47d89f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-8300923478084594629
+--- !u!114 &271792968101868649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63,29 +62,12 @@ MonoBehaviour:
   effectID: 0
   effectHolder: {fileID: 0}
   effectTarget: {fileID: 0}
-  prefabIns: {fileID: 0}
-  BasicSlashDamageTag: 0
-  BasicSlash_DmgBox: {fileID: 7770207737442041256, guid: da7ed9c2a85d7dd4896011d3116583c0, type: 3}
---- !u!114 &7513985081545090943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271792968101868653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d134144bd31565647bdd684b1323cc8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effectName: 
-  effectID: 0
-  effectHolder: {fileID: 0}
-  effectTarget: {fileID: 0}
   prefabIns: {fileID: 5126537981343851008, guid: 2b2469ee5bdc44d43a1776fb722878da, type: 3}
+  slashSmooth: 0.25
   BasicSlashHolderState: 0
   BasicSlashCardState: 0
-  slashSmooth: 0.25
+  BasicSlashDamageTag: 0
+  enemiesEffected: []
 --- !u!212 &271792968101868654
 SpriteRenderer:
   m_ObjectHideFlags: 0

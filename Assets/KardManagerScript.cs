@@ -36,6 +36,7 @@ public class KardManagerScript : MonoBehaviour
         if (nextCard)
         {
             Instantiate(Kardlist[nowCardNum]);
+            print(nowCardNum);
             nextCard = false;
         }
 

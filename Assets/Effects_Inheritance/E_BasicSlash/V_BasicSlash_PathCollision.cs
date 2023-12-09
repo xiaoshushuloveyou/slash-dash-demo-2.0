@@ -7,7 +7,6 @@ public class V_BasicSlash_PathCollision : MonoBehaviour
 
     private Color OriColor;
     public Vector3 childpathEndPointPo;
-    public List<GameObject> enemiesEffected;
 
     #region SINGLETON
     public static V_BasicSlash_PathCollision me;
@@ -16,6 +15,11 @@ public class V_BasicSlash_PathCollision : MonoBehaviour
         me = this;
     }
     #endregion
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +29,7 @@ public class V_BasicSlash_PathCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemiesEffected.Count==0)
+        if (V_BasicSlash.me.enemiesEffected.Count==0)
         {
             this.GetComponent<Renderer>().material.color = OriColor;
         }
@@ -40,7 +44,7 @@ public class V_BasicSlash_PathCollision : MonoBehaviour
         if (other.tag == "Enemy")
         {
             this.GetComponent<Renderer>().material.color = new Vector4(255.0f / 255, 126f / 255, 126f / 255, 1f);
-            enemiesEffected.Add(other.gameObject);
+            V_BasicSlash.me.enemiesEffected.Add(other.gameObject);
 
         }
 
@@ -49,7 +53,7 @@ public class V_BasicSlash_PathCollision : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            enemiesEffected.Remove(other.gameObject);
+            V_BasicSlash.me.enemiesEffected.Remove(other.gameObject);
 
         }
     }
