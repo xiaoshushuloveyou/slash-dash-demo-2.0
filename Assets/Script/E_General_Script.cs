@@ -43,6 +43,7 @@ public class E_General_Script : MonoBehaviour
             {
                 currentBreakNum = maxBreakNum;
                 breakBar.SetBreakNum(currentBreakNum);
+                
                 //EffectsPostOfficeScript.me.PO_senderInfo = new EffectsPostOfficeScript.senderState(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState,"CardEndTiming");
             }
             
