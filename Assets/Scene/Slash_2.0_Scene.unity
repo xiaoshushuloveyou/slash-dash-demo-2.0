@@ -321,6 +321,74 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &284458367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284458370}
+  - component: {fileID: 284458369}
+  - component: {fileID: 284458368}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &284458368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284458367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &284458369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284458367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &284458370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284458367}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &360274423
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy_1: {fileID: 5532444853236293646, guid: 5fd4ab2ff807ab34f8d66707644055f0, type: 3}
-  Enemy_SpawnRate: 3
+  Enemy_SpawnRate: 50
   Enemy_SpawnTimer: 0
   playerPos: {fileID: 24928662}
 --- !u!4 &360274425
@@ -750,11 +818,10 @@ MonoBehaviour:
   effectHolder: {fileID: 24928662}
   effectTarget: {fileID: 0}
   prefabIns: {fileID: 5126537981343851008, guid: 2b2469ee5bdc44d43a1776fb722878da, type: 3}
-  slashSmooth: 0.25
-  BasicSlashHolderState: 0
-  BasicSlashCardState: 0
   BasicSlashDamageTag: 0
-  enemiesEffected: []
+  BasicSlashCardState: 0
+  BasicSlash_DmgBox: {fileID: 0}
+  ifinsDmgBox: 1
 --- !u!4 &794078593
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,7 +1227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Kardlist:
   - {fileID: 271792968101868653, guid: 257c0b60ea95d2e40bb5b675561708d4, type: 3}
-  - {fileID: 271792968101868653, guid: 257c0b60ea95d2e40bb5b675561708d4, type: 3}
+  - {fileID: 7842298995031508031, guid: 823ad9a5296580b46a603d0dd69fbbdb, type: 3}
   - {fileID: 271792968101868653, guid: 257c0b60ea95d2e40bb5b675561708d4, type: 3}
   HandKard: []
   nextCard: 0

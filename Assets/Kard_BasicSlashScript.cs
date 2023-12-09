@@ -24,7 +24,6 @@ public class Kard_BasicSlashScript : MonoBehaviour
 
         if (EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState == "CardEndTiming" )
         {
-            
             Destroy(gameObject);
             KardManagerScript.me.nowCardNum += 1;
             KardManagerScript.me.nextCard = true;
