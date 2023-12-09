@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &271792968101868653
+--- !u!1 &3628432965750086022
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,55 +8,55 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 271792968101868655}
-  - component: {fileID: 271792968101868652}
-  - component: {fileID: -8300923478084594629}
-  - component: {fileID: 7513985081545090943}
-  - component: {fileID: 271792968101868654}
+  - component: {fileID: 5946470728224555448}
+  - component: {fileID: 5053114848655969738}
+  - component: {fileID: -2116466929309480287}
+  - component: {fileID: 6028033416518508996}
+  - component: {fileID: 3947191413385989070}
   m_Layer: 0
-  m_Name: Kard_BasicSlash
+  m_Name: Kard_BreakSlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &271792968101868655
+--- !u!4 &5946470728224555448
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271792968101868653}
+  m_GameObject: {fileID: 3628432965750086022}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 3.379807, y: 11.846781, z: -3.2485185}
+  m_LocalPosition: {x: 3.379807, y: 11.84678, z: -3.248518}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
---- !u!114 &271792968101868652
+--- !u!114 &5053114848655969738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271792968101868653}
+  m_GameObject: {fileID: 3628432965750086022}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd2344040fb373d4cbf0ab6bd47d89f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-8300923478084594629
+--- !u!114 &-2116466929309480287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271792968101868653}
+  m_GameObject: {fileID: 3628432965750086022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2af8b784e2953a4d9592c8c34349c77, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fc19b57ec2a300458f7873eda9c9983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   effectName: 
@@ -64,15 +64,17 @@ MonoBehaviour:
   effectHolder: {fileID: 0}
   effectTarget: {fileID: 0}
   prefabIns: {fileID: 0}
-  BasicSlashDamageTag: 0
-  BasicSlash_DmgBox: {fileID: 7770207737442041256, guid: da7ed9c2a85d7dd4896011d3116583c0, type: 3}
---- !u!114 &7513985081545090943
+  BasicSlashDamageTag: 1
+  BasicSlashCardState: 0
+  BasicSlash_BrkBox: {fileID: 7770207737442041256, guid: 6a8ccb443943a35499f1c8495c2db37b, type: 3}
+  ifinsBrkBox: 1
+--- !u!114 &6028033416518508996
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271792968101868653}
+  m_GameObject: {fileID: 3628432965750086022}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d134144bd31565647bdd684b1323cc8f, type: 3}
@@ -86,13 +88,13 @@ MonoBehaviour:
   BasicSlashHolderState: 0
   BasicSlashCardState: 0
   slashSmooth: 0.25
---- !u!212 &271792968101868654
+--- !u!212 &3947191413385989070
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271792968101868653}
+  m_GameObject: {fileID: 3628432965750086022}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -127,7 +129,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 80b92c3296a7743538b7eb844b078aac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f9c5492cd21af495680a6888779704a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
