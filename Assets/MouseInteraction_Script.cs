@@ -19,6 +19,9 @@ public class MouseInteraction_Script : MonoBehaviour
     public float mouseDrag_time;
     public float mouseDrag_maxTime;
     public bool dragging = false;
+
+    public bool ifmouseCanUse = true;
+
     #region SINGLETON
     public static MouseInteraction_Script me;
     private void Awake()
@@ -37,6 +40,24 @@ public class MouseInteraction_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonUp(0))
+        {
+            ifmouseCanUse = false;
+        }
+        if (EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState == "CardEndTiming")
+        {
+            ifmouseCanUse = true;
+        }
+
+        if (ifmouseCanUse)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         mouse3Dposition();
         if (Input.GetMouseButtonDown(0))
         {

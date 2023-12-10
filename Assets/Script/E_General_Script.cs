@@ -17,6 +17,9 @@ public class E_General_Script : MonoBehaviour
     public Effect_CPU CPUscript;
 
     public bool ifhooked = false;
+    public bool ifbutted = false;
+
+    public Vector3 hitpoint;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,7 @@ public class E_General_Script : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (currentBreakNum<0)
         {
@@ -43,7 +46,6 @@ public class E_General_Script : MonoBehaviour
             {
                 currentBreakNum = maxBreakNum;
                 breakBar.SetBreakNum(currentBreakNum);
-                
                 //EffectsPostOfficeScript.me.PO_senderInfo = new EffectsPostOfficeScript.senderState(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState,"CardEndTiming");
             }
             
@@ -52,6 +54,19 @@ public class E_General_Script : MonoBehaviour
         {
             CPUscript.E_hookerBoxEffectLogic(C_Player_Script.me.transform.position);
             ifhooked = CPUscript.ifhookboxover;
+        }
+
+        if (ifbutted)
+        {
+            CPUscript.E_HeadbuttedEffectLogic(hitpoint);
+            //print(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState);
+        }
+        if (EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState == "CardEndTiming")
+        {
+            ifbutted = false;
+            enemyDamage(CPUscript.E_headbuttedDamageLogic());
+            //print("DDDDDDamge_____"+CPUscript.E_headbuttedDamageLogic()[0]);
+            CPUscript.E_BasicBreakTimerReset();
         }
     }
     private void enemyDamage(List<int> damageList)
@@ -95,7 +110,18 @@ public class E_General_Script : MonoBehaviour
         {
             ifhooked = true;
         }
-
+        if (other.tag == "HeadbuttedBox" )
+        {
+            //print(hitpoint + "_______" + ifbutted + "_______" + CPUscript.ifstopmove);
+            //effect
+            ifbutted = true;
+            hitpoint = transform.position-C_Player_Script.me.transform.position;
+            CPUscript.ifstopmove = true;
+        }
+        if (other.tag == "KockbackBox")
+        {
+            CPUscript.E_KnockedBackLogic();
+        }
     }
 
 }

@@ -34,6 +34,10 @@ public class V_BasicSlash_Interaction : EffectsCreater
         if (Vector3.SqrMagnitude(effectHolder.transform.position - slashTarget) <= 0.005f && ifMouse0Up)
         {
             BasicSlashHolderState = HolderState.StateIdle;
+            if (BasicSlashCardState != CardState.CardEndTiming)
+            {
+                BasicSlashCardState = CardState.CardEndTiming;
+            }
             PO_senderInfoSyn();
             ifMouse0Up = false;
         }

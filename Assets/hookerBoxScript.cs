@@ -25,10 +25,10 @@ public class hookerBoxScript : MonoBehaviour
     void Update()
     {
         transform.position = Vector3.SmoothDamp(transform.position, hookTargetPo, ref velocity, BoxslashSmooth / 10f);
-        if (Vector3.SqrMagnitude(transform.position - hookTargetPo) <= 0.005f)
-        {
-            EffectsPostOfficeScript.me.PO_senderInfo = new EffectsPostOfficeScript.senderState(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState,
-                "CardEndTiming");
-        }
+        //if (Vector3.SqrMagnitude(transform.position - hookTargetPo) <= 0.005f)
+        //{
+        //    EffectsPostOfficeScript.me.PO_senderInfo = new EffectsPostOfficeScript.senderState(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState,
+        //        "CardEndTiming");
+        //}
     }
 }

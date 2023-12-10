@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a45f70b3553b4e4192bd5252964488d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - effectHolder: {instanceID: 0}
+  - effectTarget: {instanceID: 0}
+  - prefabIns: {instanceID: 0}
+  - KnockBackBox: {fileID: 3815126283005915292, guid: 79050f027a7e99749a0905cd23deed03, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

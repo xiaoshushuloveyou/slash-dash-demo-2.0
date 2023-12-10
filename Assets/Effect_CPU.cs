@@ -8,13 +8,15 @@ public class Effect_CPU : MonoBehaviour
     public float breakTimeLength = 2f;
     public float breakTimeer = 0f;
     public bool CPUifnowisbreak = true;
-    public bool ifstopmove = false;
+    public bool ifstopmove = false;//send info to Enemy movement
 
     private Vector3 velocity = Vector3.zero;
     public float Smooth1 = 1f;
 
     public Vector3 halfdistoPlayer;
     public bool ifhookboxover = false;
+
+    public float headButtedTimer = 0f;
 
     // Start is called before the first frame update
     public void E_healthBarInstantiate(GameObject effectholder,int E_HealthMaxNum, GameObject E_HealthPoint)
@@ -108,7 +110,7 @@ public class Effect_CPU : MonoBehaviour
         CPUifnowisbreak = true;
         breakTimeer = 0f;
         ifstopmove = false;
-
+        headButtedTimer = 0f;
 
     }
 
@@ -124,18 +126,65 @@ public class Effect_CPU : MonoBehaviour
         //print("YYYYYYYYYYYYYYYY");
         if (Vector3.SqrMagnitude(transform.position - halfdistoPlayer) <= 0.005f)
         {
+            EffectsPostOfficeScript.me.PO_senderInfo = new EffectsPostOfficeScript.senderState(EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState,"CardEndTiming");
             ifhookboxover = false;
         }
     }
+
+    public void E_HeadbuttedEffectLogic( Vector3 hitpoint)
+    {
+        //be smashed
+        //Vector3 hitpointtoPlayer = hitpoint - C_Player_Script.me.transform.position;
+        transform.position = C_Player_Script.me.transform.position + hitpoint * 1.2f;
+        headButtedTimer += Time.deltaTime;
+    }
+
+    public List<int> E_headbuttedDamageLogic()
+    {
+        List<int> returnvalue = new List<int>();
+        //print(headButtedTimer);
+        if (headButtedTimer<0.191f && headButtedTimer > 0.01f)
+        {
+            returnvalue.Add(1);
+        }
+        else if (headButtedTimer>0.2f)
+        {
+            returnvalue.Add(2);
+        }
+        else if (headButtedTimer <= 0.01f)
+        {
+            returnvalue.Add(0);
+        }
+        else
+        {
+            returnvalue.Add(3);
+        }
+        return returnvalue;
+    }
+
+    public void E_KnockedBackLogic()
+    {
+        Vector3 KnockbackDir = transform.position - C_Player_Script.me.transform.position;
+        KnockbackDir = KnockbackDir.normalized;
+        transform.position += KnockbackDir * 3f; 
+
+    }
+
+    /// <Private>
+    /// 
+    /// 
     private Vector3 GetBetweenPoint(Vector3 start, Vector3 end, float percent = 0.5f)
     {
         Vector3 normal = (end - start).normalized;
         float distance = Vector3.Distance(start, end);
         return normal * (distance * percent) + start;
     }
-
     private void Update()
     {
-        
+        if (EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState == "CardEndTiming")
+        {
+            E_BasicBreakTimerReset();
+            //
+        }
     }
 }

@@ -2843,6 +2843,7 @@ MonoBehaviour:
   Smooth1: 1
   halfdistoPlayer: {x: 0, y: 0, z: 0}
   ifhookboxover: 0
+  headButtedTimer: 0
 --- !u!54 &3939967322886305412
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2858,7 +2859,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &3939967322886305408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2879,6 +2880,8 @@ MonoBehaviour:
   movementLogic: {fileID: -4876394425068683238}
   CPUscript: {fileID: -1574407247824571496}
   ifhooked: 0
+  ifbutted: 0
+  hitpoint: {x: 0, y: 0, z: 0}
 --- !u!114 &3939967322886305414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2902,8 +2905,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.17
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.35150206
+  m_Center: {x: -3.3284633e-10, y: 0.18150195, z: -0.0000002736639}
 --- !u!1 &5685078542538562491
 GameObject:
   m_ObjectHideFlags: 0
