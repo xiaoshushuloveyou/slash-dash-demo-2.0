@@ -20,7 +20,7 @@ public class V_EndKnockBack : EffectsCreater
         if (EffectsPostOfficeScript.me.PO_senderInfo.SenderCardState == "CardEndTiming" && !ifinstheKBboxalready)
         {
             GameObject knockbackbox = Instantiate(KnockBackBox);
-            print("YYYYYYYYYYYYYYYY");
+            //print("YYYYYYYYYYYYYYYY");
             knockbackbox.transform.position = C_Player_Script.me.transform.position;
             ifinstheKBboxalready = true;
         }

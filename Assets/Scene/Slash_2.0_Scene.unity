@@ -769,6 +769,7 @@ MonoBehaviour:
   mouseDrag_time: 0
   mouseDrag_maxTime: 0
   dragging: 0
+  ifmouseCanUse: 1
 --- !u!4 &763436451
 Transform:
   m_ObjectHideFlags: 0
@@ -965,8 +966,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 60, z: -58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2043923961}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
@@ -1477,13 +1477,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043923960}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.147, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 963194228}
-  m_RootOrder: 0
+  m_Father: {fileID: 24928669}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2043923962
 MonoBehaviour:
@@ -1497,12 +1497,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e90bbd23740f4c418a061130cc4956c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Kardlist:
+  Kardlist: []
+  KardIDpool:
+  - {fileID: 271792968101868653, guid: 257c0b60ea95d2e40bb5b675561708d4, type: 3}
   - {fileID: 3628432965750086022, guid: 5da1ef2a4317fa3468f60089918bab3b, type: 3}
   - {fileID: 7842298995031508031, guid: 823ad9a5296580b46a603d0dd69fbbdb, type: 3}
   - {fileID: 4889105459240862579, guid: c21e96ef1dfa8344cbd22dd9a936627b, type: 3}
-  - {fileID: 271792968101868653, guid: 257c0b60ea95d2e40bb5b675561708d4, type: 3}
-  HandKard: []
   nextCard: 0
   nowCardNum: 0
 --- !u!1 &2084974804

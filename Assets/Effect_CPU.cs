@@ -166,7 +166,8 @@ public class Effect_CPU : MonoBehaviour
     {
         Vector3 KnockbackDir = transform.position - C_Player_Script.me.transform.position;
         KnockbackDir = KnockbackDir.normalized;
-        transform.position += KnockbackDir * 3f; 
+        transform.position += KnockbackDir * 10f;
+        transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
 
     }
 

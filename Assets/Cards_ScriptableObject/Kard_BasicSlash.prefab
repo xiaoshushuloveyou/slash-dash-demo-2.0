@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271792968101868653}
   m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 3.379807, y: 11.846781, z: -3.2485185}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,9 @@ MonoBehaviour:
   effectTarget: {fileID: 0}
   prefabIns: {fileID: 0}
   BasicSlashDamageTag: 0
+  BasicSlashCardState: 0
   BasicSlash_DmgBox: {fileID: 7770207737442041256, guid: da7ed9c2a85d7dd4896011d3116583c0, type: 3}
+  ifinsDmgBox: 1
 --- !u!114 &7513985081545090943
 MonoBehaviour:
   m_ObjectHideFlags: 0
