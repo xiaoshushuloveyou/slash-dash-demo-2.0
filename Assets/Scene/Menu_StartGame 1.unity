@@ -522,7 +522,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1063169117}
-        m_TargetAssemblyTypeName: Button_Start_Script, Assembly-CSharp
+        m_TargetAssemblyTypeName: Button_Restart_Script, Assembly-CSharp
         m_MethodName: playGamePressed
         m_Mode: 1
         m_Arguments:
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1063169112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aef9e0817b74d834aab664e5659b0bed, type: 3}
+  m_Script: {fileID: 11500000, guid: c8e6148c00a9c104d9b2e5a4b26f2e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 1063169114}
